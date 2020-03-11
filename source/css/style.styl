@@ -1,8 +1,8 @@
 family-sans = "Ubuntu", "Roboto", "Open Sans", "Microsoft YaHei", sans-serif
 family-mono = "Source Code Pro", monospace, "Microsoft YaHei"
-gap = 32px
+gap = 64px
 screen-tablet = 769px
-screen-desktop = 1024px
+screen-desktop = 1088px
 screen-widescreen = 1280px
 screen-fullhd = 1472px 
 
@@ -17,7 +17,6 @@ body
 
 body, button, input, select, textarea
     font-family: family-sans
-    
 
 @media screen and (min-width: screen-widescreen)
     .is-1-column .container
@@ -57,11 +56,9 @@ body, button, input, select, textarea
 .card
     border-radius: 4px
     box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 1px rgba(0,0,0,0.1)
-    &:hover
-        box-shadow: 0 6px 15px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.1)
     & + .card,
     & + .column-right-shadow
-        margin-top: 1.0rem
+        margin-top: 1.5rem
     &.card-transparent
         box-shadow: none
         background: transparent
@@ -88,7 +85,7 @@ img.thumbnail
         align-items: stretch
         display: flex
         padding: 0
-        flex-shrink: 1
+        flex-shrink: 0
     .navbar-menu
         flex-grow: 1
         flex-shrink: 0
@@ -191,7 +188,7 @@ img.thumbnail
      .level
         &, &.is-mobile
             .level-item:not(:last-child)
-                margin-left: 0rem
+                margin-left: 0.75rem
                 margin-right: 0
 
 .donate
@@ -453,16 +450,6 @@ figure.highlight
         min-width: inherit
         border-radius: inherit
 
-    .hljs-deletion
-        background-color: #ffd3d8
-    .hljs-addition
-        background-color: #c7ffd7
-.night
-    .hljs-deletion
-        background-color: #0e1225 !important
-    .hljs-addition
-        background-color: #0e1225 !important
-
 /* ---------------------------------
  *          Overflow Table
  * --------------------------------- */
@@ -501,16 +488,6 @@ figure.highlight
         all: initial
 
 /* ---------------------------------
- *        Add counter for title CSS
- * --------------------------------- */
-// .article {counter-reset:section}
-// .article h2{counter-reset:sub-section}
-// .article h3{counter-reset:composite}
-// .article h4{counter-reset:detail}
-// .article h2:before{content:counter(section) " ";counter-increment:section}
-// .article h3:before{content:counter(section) "." counter(sub-section) " ";counter-increment:sub-section}
-// .article h4:before{content:counter(section) "." counter(sub-section) "." counter(composite) " ";counter-increment:composite}
-/* ---------------------------------
  *        Add Copyright CSS
  * --------------------------------- */
 @import copyright
@@ -547,9 +524,6 @@ figure.highlight
 *            night mode
 * --------------------------------- */
 
-// @media (prefers-color-scheme: dark) {
-//     /* 黑暗模式，深色主题 */
-// }
 dark-primary-color = rgb(55, 61, 72)
 dark-primary-color-hover = rgb(67, 74, 86)
 dark-primary-color-active = rgb(44, 49, 58)
@@ -568,17 +542,7 @@ body.night
 
 .night
     // code highlight (https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css)
-    .hljs{display:block;overflow-x:auto;padding:0.5em;color:#abb2bf;background:#282c34}
-    .hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}
-    .hljs-doctag,.hljs-keyword,.hljs-formula{color:#c678dd}
-    .hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst{color:#e06c75}
-    .hljs-literal{color:#56b6c2}
-    .hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string{color:#98c379}
-    .hljs-built_in,.hljs-class .hljs-title{color:#e6c07b}.hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number{color:#d19a66}
-    .hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title{color:#61aeee}
-    .hljs-emphasis{font-style:italic}
-    .hljs-strong{font-weight:bold}
-    .hljs-link{text-decoration:underline}
+    .hljs{display:block;overflow-x:auto;padding:0.5em;color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-keyword,.hljs-formula{color:#c678dd}.hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string{color:#98c379}.hljs-built_in,.hljs-class .hljs-title{color:#e6c07b}.hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number{color:#d19a66}.hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title{color:#61aeee}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.hljs-link{text-decoration:underline}
 
     .content code
         color: rgb(203,186,125)
@@ -616,14 +580,11 @@ body.night
             display: inline-block
 
     // navigation bar, cards
-    .navbar-main,
-    .navbar-menu,
-    .navbar-item
+    .navbar-main .navbar-menu .navbar-item
         &:hover
             color: #ffffff
             background-color: dark-primary-color
     .navbar,
-    .navbar-menu,
     .card
         background-color: rgba(40,44,52,0.5)
         backdrop-filter: none

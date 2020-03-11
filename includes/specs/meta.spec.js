@@ -62,5 +62,34 @@ module.exports = {
             [doc]: 'Google+ profile link',
             [defaultValue]: null
         }
+    },
+    neteaseMusic: {
+        [type]: 'object',
+        [doc]: 'neteaseMusic',
+        enable: {
+            [type]: 'bool',
+            [doc]: 'enable music widget',
+            [defaultValue]: false
+        },
+        id: {
+            [type]: 'string',
+            [doc]: 'Facebook App ID',
+            [defaultValue]: null
+        }
+    },
+    revolveMap: {
+        [type]: 'object',
+        [doc]: 'revolveMap',
+        enable: {
+            [type]: 'bool',
+            [doc]: 'enable revolveMap widget',
+            [defaultValue]: false
+        },
+        id: {
+            [type]: 'string',
+            [doc]: 'Facebook App ID',
+            [defaultValue]: null
+        }
     }
+    
 };

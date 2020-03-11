@@ -65,6 +65,18 @@ const DEFAULT_WIDGETS = [
     {
         type: 'tag',
         position: 'right'
+    },
+    {
+        type: 'related_posts',
+        position: 'right'
+    },
+    {
+        type: 'music',
+        position: 'right'
+    },
+    {
+        type: 'map',
+        position: 'right'
     }
 ];
 

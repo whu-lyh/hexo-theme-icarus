@@ -123,6 +123,12 @@ share:
 
 # Sidebar proportion settings.
 # 
+neteaseMusic: 
+    enable: true
+    id: 4878237788
+revolveMap: 
+    enable: true
+    id: 53u8jvixw8q
 proportion:
     homepage:
         sidebar: 'is-one-third-tablet is-3-desktop is-3-widescreen is-one-fifth-fullhd'
@@ -130,7 +136,6 @@ proportion:
     post:
         sidebar: 'is-one-third-tablet is-3-desktop is-one-fifth-widescreen is-one-fifth-fullhd'
         article: 'is-two-thirds-tablet is-9-desktop is-7-widescreen is-three-fifths-fullhd'
-
 # Sidebar settings.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -261,8 +266,6 @@ widgets:
     #     feedburner_id: 04299627998705547305
     #     description: wqxanne@gmail.com
     #     position: right
-
-
 
 # Other plugin settings
 plugins:
