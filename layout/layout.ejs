@@ -36,10 +36,12 @@
                     <% if (is_categories() === true) { %>
                         <%- _partial('tags') %>
                         <%- _partial('archive') %>
+                        <%- _partial('adscross') %>
                     <% } %>
                     <% if (is_tags() === true) { %>
                         <%- _partial('categories') %>
                         <%- _partial('archive') %>
+                        <%- _partial('adscross') %>
                     <% } %>
                 </div>
                 <%-  _partial('common/widget', { position: 'left' }) %>

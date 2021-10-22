@@ -2,54 +2,56 @@
 <% if (get_config('meta_generator', true)) { %>
 <meta name="generator" content="Hexo <%= hexo_version() %>" />
 <% } %>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1"
+/>
 <%- meta() %>
 <title><%= page_title() %></title>
 
-<meta name="google-site-verification" content="GvExXP5gCEjttN6mUpfkSVS0rn_Vbyw5KKRRhqI2jnU" />
-<script data-ad-client="ca-pub-6929188339121540" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta
+  name="google-site-verification"
+  content="GvExXP5gCEjttN6mUpfkSVS0rn_Vbyw5KKRRhqI2jnU"
+/>
+<script
+  data-ad-client="ca-pub-6929188339121540"
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+></script>
 
-<% if (has_config('open_graph')) { %>
-    <%- open_graph({
-        twitter_id: get_config('open_graph.twitter_id'),
-        twitter_site: get_config('open_graph.twitter_site'),
-        google_plus: get_config('open_graph.google_plus'),
-        fb_admins: get_config('open_graph.fb_admins'),
-        fb_app_id: get_config('open_graph.fb_app_id'),
-        image: get_og_image(page)
-    }) %>
-<% } %>
-
-
-<% if (has_config('canonical_url')) { %>
+<% if (has_config('open_graph')) { %> <%- open_graph({ twitter_id:
+get_config('open_graph.twitter_id'), twitter_site:
+get_config('open_graph.twitter_site'), google_plus:
+get_config('open_graph.google_plus'), fb_admins:
+get_config('open_graph.fb_admins'), fb_app_id:
+get_config('open_graph.fb_app_id'), image: get_og_image(page) }) %> <% } %> <%
+if (has_config('canonical_url')) { %>
 <link rel="canonical" href="<%- get_config('canonical_url') %>" />
-<% } %>
-
-<% if (has_config('rss')) { %>
-<link rel="alternative" href="<%- get_config('rss') %>" title="<%= get_config('title') %>" type="application/atom+xml">
-<% } %>
-
-<% if (has_config('favicon')) { %>
-    <link rel="apple-touch-icon" sizes="128x128" href="<%- url_for(get_config('favicon')) %>">
-<% } %>
-
-<% if (has_config('favicon')) { %>
-<link rel="icon" sizes="32x32" href="<%- url_for(get_config('favicon')) %>">
-<% } %>
-
-<% if (has_config('favicon')) { %>
-    <link rel="mask-icon" href="<%- url_for(get_config('favicon')) %>" color="{{ theme.android_chrome_color }}">
-<% } %>
-
-<%- _css(cdn('bulma', '0.7.2', 'css/bulma.css')) %>
-<%- _css(iconcdn()) %>
-<%- _css(fontcdn('Ubuntu:400,600|Source+Code+Pro')) %>
-<%- _css(cdn('highlight.js', '9.12.0', 'styles/' + get_config('article.highlight.theme') + '.css')) %>
-
-<% if (has_config('plugins')) { %>
-    <% for (let plugin in get_config('plugins')) { %>
-    <%- _partial('plugin/' + plugin, { head: true, plugin: get_config('plugins')[plugin] }) %>
-    <% } %>
-<% } %>
-
-<%- _css('css/style') %>
+<% } %> <% if (has_config('rss')) { %>
+<link
+  rel="alternative"
+  href="<%- get_config('rss') %>"
+  title="<%= get_config('title') %>"
+  type="application/atom+xml"
+/>
+<% } %> <% if (has_config('favicon')) { %>
+<link
+  rel="apple-touch-icon"
+  sizes="128x128"
+  href="<%- url_for(get_config('favicon')) %>"
+/>
+<% } %> <% if (has_config('favicon')) { %>
+<link rel="icon" sizes="32x32" href="<%- url_for(get_config('favicon')) %>" />
+<% } %> <% if (has_config('favicon')) { %>
+<link
+  rel="mask-icon"
+  href="<%- url_for(get_config('favicon')) %>"
+  color="{{ theme.android_chrome_color }}"
+/>
+<% } %> <%- _css(cdn('bulma', '0.7.2', 'css/bulma.css')) %> <%- _css(iconcdn())
+%> <%- _css(fontcdn('Ubuntu:400,600|Source+Code+Pro')) %> <%-
+_css(cdn('highlight.js', '9.12.0', 'styles/' +
+get_config('article.highlight.theme') + '.css')) %> <% if
+(has_config('plugins')) { %> <% for (let plugin in get_config('plugins')) { %>
+<%- _partial('plugin/' + plugin, { head: true, plugin:
+get_config('plugins')[plugin] }) %> <% } %> <% } %> <%- _css('css/style') %>
